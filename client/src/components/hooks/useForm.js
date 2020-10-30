@@ -2,26 +2,10 @@
 
 import React, { useState } from "react";
 
-let useForm = function(){
-  const initialValue = {
-    firstName: "",
-    lastName: "",
-    address: "",
-    city: "",
-    state: "",
-    zip: "",
-  };
-    const [values, setValues] = useState(initialValue)
-    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-    // const handleChanges = (e) => {
-    //     setValues({ ...values, [e.target.name]: e.target.value });
-    //   };
-
-    //   const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     setShowSuccessMessage(true);
-    //   }
-      return ([values,showSuccessMessage])
+let useForm = function(initialValue){
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [values, setValues] = useState(initialValue);
+return ([showSuccessMessage, setShowSuccessMessage,values, setValues])
 }
 
 export default useForm
